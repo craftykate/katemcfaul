@@ -8,4 +8,12 @@
     margin-bottom: 15px;
     border-bottom: 1px solid $text;
   }
+  .languagesUsed {
+    font-size: 130%;
+    span {
+      font-size: 80%;
+      font-weight: bold;
+      color: lighten($text, 5%);
+    }
+  }
 }
