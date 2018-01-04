@@ -89,7 +89,7 @@ const favoriteProjects = () => (
     <Project
       name="This Site!"
       languages="ReactJS, JavaScript, HTML/JSX, CSS"
-      codeLink="https://github.com/craftykate/kates-recipes"
+      codeLink="https://github.com/craftykate/katemcfaul"
       description={<p>It should go without saying by now that I also built this site. Built with React. </p>}/>
   </div>
 );
