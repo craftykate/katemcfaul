@@ -9,6 +9,8 @@ import ikea from './images/ikea.jpg';
 import mastermind from './images/mastermind.jpg';
 import chess from './images/chess.jpg';
 import calculator from './images/calculator.jpg';
+import garden from './images/garden.jpg';
+import recipes from './images/recipes.jpg';
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
@@ -66,6 +68,18 @@ const favoriteProjects = () => (
       codeLink="https://github.com/craftykate/odin-project"
       languages="JavaScript, jQuery, Ruby, Ruby on Rails, HTML, CSS"
       description={<p>Many more projects built while going through the lessons for <a href="https://www.theodinproject.com/">the Odin Project</a>. While doing the class and uploading my completed projects to the site the founder of the school reached out to me to comment on how good my code was. Before completing the class he asked me to join his team and I helped work on the website and mentor other students.</p>}/>
+    <Project
+      name="Gardening App"
+      image={garden}
+      codeLink="https://github.com/craftykate/rails-gardening-app"
+      languages="Ruby, Ruby on Rails, HTML, SCSS"
+      description={<p>An extensive gardening app written in Ruby on Rails tracking all my gardening boxes, what is planted in each one and where and when each seed was planted and when it should reach maturity. Database of seeds populates a calendar showing which seeds can be planted at any given time.</p>}/>
+    <Project
+      name="Recipe Manager"
+      image={recipes}
+      codeLink="https://github.com/craftykate/kates-recipes"
+      languages="Ruby, Ruby on Rails, HTML, SCSS"
+      description={<p>A program that stores recipes, displays each recipe on its own HTML page, allows user to search recipes based on ingredients, compile a shopping list of several recipes and multiply or divide ingredients in a recipe.</p>}/>
   </div>
 );
 
