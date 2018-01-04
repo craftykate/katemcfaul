@@ -11,11 +11,12 @@ import chess from './images/chess.jpg';
 import calculator from './images/calculator.jpg';
 import garden from './images/garden.jpg';
 import recipes from './images/recipes.jpg';
+import grampa from './images/grampa.jpg'
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
     <h2>Featured Projects</h2>
-    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, Ruby, Rails</span></p>
+    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, Ruby, Rails, PHP</span></p>
     <Project
       name="Color Picker"
       image={color}
@@ -80,6 +81,11 @@ const favoriteProjects = () => (
       codeLink="https://github.com/craftykate/kates-recipes"
       languages="Ruby, Ruby on Rails, HTML, SCSS"
       description={<p>A program that stores recipes, displays each recipe on its own HTML page, allows user to search recipes based on ingredients, compile a shopping list of several recipes and multiply or divide ingredients in a recipe.</p>}/>
+    <Project
+      name="Grampa's Site"
+      image={grampa}
+      languages="PHP, JavaScript, HTML, CSS"
+      description={<p>A site I built for my grandfather with a contact form written in PHP that sent messages right to me and screenshots of how to solve his most-asked questions. He called me daily with questions aobut how to use his iPad and I was always happy to help, but having screenshots for him to look at while I talked him through his questions was helpful. </p>}/>
   </div>
 );
 
