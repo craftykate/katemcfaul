@@ -1,0 +1,11 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_colors.scss';
+
+.favoriteProjects {
+  margin-top: 20px;
+  h2 {
+    font-size: 170%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $text;
+  }
+}

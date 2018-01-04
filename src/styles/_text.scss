@@ -27,7 +27,6 @@
 	p {
 		margin-bottom: 1em;
 		line-height:120%;
-		text-align:justify;
 	}
 
 	a {
@@ -36,7 +35,6 @@
 		&:visited {
 		}
 		&:hover {
-			color: $main;
 			text-decoration: underline;
 			cursor: pointer;
 		}
