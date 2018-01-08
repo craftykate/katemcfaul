@@ -11,7 +11,8 @@ import chess from './images/chess.jpg';
 import calculator from './images/calculator.jpg';
 import garden from './images/garden.jpg';
 import recipes from './images/recipes.jpg';
-import grampa from './images/grampa.jpg'
+import grampa from './images/grampa.jpg';
+import gauge from './images/gauge.jpg';
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
@@ -69,6 +70,13 @@ const favoriteProjects = () => (
       languages="JavaScript, jQuery, Ruby, Ruby on Rails, HTML, CSS"
       codeLink="https://github.com/craftykate/odin-project"
       description={<p>Many more projects built while going through the lessons for <a href="https://www.theodinproject.com/">the Odin Project</a>. While doing the class and uploading my completed projects to the site the founder of the school reached out to me to comment on how good my code was. Before completing the class he asked me to join his team and I helped work on the website and mentor other students.</p>}/>
+    <Project
+      name="Gauge Calculator"
+      image={gauge}
+      languages="ReactJS, JavaScript, HTML/JSX, SCSS"
+      codeLink="https://github.com/craftykate/gauge-calculator"
+      liveLink="http://gaugecalculator.surge.sh/"
+      description={<p>For my knitting peeps: Enter in your current gauge or item size and which needle you used and then enter the gauge or size it <i>should</i> be and the app will tell you which needle to use. If the needle needed falls between two needle sizes you'll get results from both those needles and you can decide which one suits you. Yet another one of my "I wish I had an app that..." projects!</p>} />
     <Project
       name="Gardening App"
       image={garden}
