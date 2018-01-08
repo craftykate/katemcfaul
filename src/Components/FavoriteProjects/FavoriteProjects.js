@@ -24,7 +24,7 @@ const favoriteProjects = () => (
       languages="ReactJS, JavaScript, HTML/JSX, SCSS"
       codeLink="https://github.com/craftykate/color-picker"
       liveLink="http://kates-color-picker.surge.sh/"
-      description={<p>Need some color inspiration? Choose a color from a pop up color picker to see complimentary colors. Save colors for later, hover over colors to see their hex and rgb codes. Colors show up on either a white or black background. Built with React and compatible with mobile devices.</p>}/>
+      description={<p>Need some color inspiration? Choose a color from a pop up color picker to see five different color combinations. Save colors for later, hover over colors to see their hex and rgb codes. Colors show up on either a white or black background. I actually use this site all the time whether I'm picking colors for a site or an art project! Built with React and compatible with mobile devices - bring it to the yarn store, paint store, fabric store...</p>}/>
     <Project
       name="Snake Game"
       image={snake}
