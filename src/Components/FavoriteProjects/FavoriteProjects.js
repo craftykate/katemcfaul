@@ -23,7 +23,7 @@ const favoriteProjects = () => (
       image={color}
       languages="ReactJS, JavaScript, HTML/JSX, SCSS"
       codeLink="https://github.com/craftykate/color-picker"
-      liveLink="http://kates-color-picker.surge.sh/"
+      liveLink="http://katescolorpicker.surge.sh/"
       description={<p>Need some color inspiration? Choose a color from a pop up color picker to see five different color combinations. Save colors for later, hover over colors to see their hex and rgb codes. Colors show up on either a white or black background. I actually use this site all the time whether I'm picking colors for a site or an art project! Built with React and compatible with mobile devices - bring it to the yarn store, paint store, fabric store...</p>}/>
     <Project
       name="Snake Game"
@@ -57,7 +57,7 @@ const favoriteProjects = () => (
       image={calculator}
       languages="jQuery, JavaScript"
       codeLink="https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/calculator"
-      liveLink="http://jsfiddle.net/craftykate/k9ewcpvr/embedded/result/"
+      liveLink="http://katesjquerycalculator.surge.sh/"
       description={<p>A full-featured calculator with memory buttons and a memory tape next to it to see past calculations. After a calculating it correctly builds off previous result if you start with an operator instead of a new number. Clear button intelligently switches between clearing the last number entered or the whole calculation. Number in memory displayed above.</p>}/>
     <Project
       name="Mastermind"
