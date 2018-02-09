@@ -11,13 +11,14 @@ import chess from './images/chess.jpg';
 import calculator from './images/calculator.jpg';
 import garden from './images/garden.jpg';
 import recipes from './images/recipes.jpg';
+import chores from './images/chores.jpg';
 import grampa from './images/grampa.jpg';
 import gauge from './images/gauge.jpg';
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
     <h2>Featured Projects</h2>
-    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, Ruby, Rails, PHP</span></p>
+    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, Axios, Ruby, Rails, PHP</span></p>
     <Project
       name="Color Picker"
       image={color}
@@ -89,6 +90,12 @@ const favoriteProjects = () => (
       languages="Ruby, Ruby on Rails, HTML, SCSS"
       codeLink="https://github.com/craftykate/kates-recipes"
       description={<p>A program that stores recipes, displays each recipe on its own HTML page, allows user to search recipes based on ingredients, compile a shopping list of several recipes and multiply or divide ingredients in a recipe.</p>}/>
+    <Project
+      name="Chores App"
+      image={chores}
+      languages="ReactJS, JavaScript, HTML/JSX, SCSS, Axios"
+      codeLink="https://github.com/craftykate/boyschores"
+      description={<p>An app I built for my boys to streamline chores. Each day they have a certain amount of chore points they need to accomplish, so the top chart lists available chores they can pick from and how many points they are worth. Each boy has his own chart below that listing the chores he has completed and required chores he still has to do. Data stored in Firebase database, accessed/modified with Axios. Mobile-friendly, so chores are easy to add from my phone when I see they need doing. Feature-rich app we use every day.</p>} />
     <Project
       name="Grampa's Site"
       image={grampa}
