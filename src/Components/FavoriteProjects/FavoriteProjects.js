@@ -5,6 +5,7 @@ import Project from '../Project/Project';
 import snake from './images/snake.png';
 import color from './images/color.jpg';
 import paper from './images/paper.jpg';
+import temp from './images/temp_sensor_esp.jpg';
 import ikea from './images/ikea.jpg';
 import mastermind from './images/mastermind.jpg';
 import chess from './images/chess.jpg';
@@ -18,7 +19,7 @@ import gauge from './images/gauge.jpg';
 const favoriteProjects = () => (
   <div className="favoriteProjects">
     <h2>Featured Projects</h2>
-    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, Axios, Ruby, Rails, PHP</span></p>
+    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, C++, Axios, Ruby, Rails, PHP</span></p>
     <Project
       name="Color Picker"
       image={color}
@@ -40,6 +41,12 @@ const favoriteProjects = () => (
       codeLink="https://github.com/craftykate/paper-calculators"
       liveLink="http://kates-paper-calculators.surge.sh/"
       description={<p>A site with three different calculators for making different things out of paper. Input the dimensions you want your item to be and the calculator will spit out the dimensions to cut your paper to, where you need to put your folds and how to assemble. Calculator functions built with JavaScript, input fields handled with React.</p>}/>
+    <Project
+      name="WiFi-enabled Temperature Sensor"
+      image={temp}
+      languages="C++, Arduino, ESP8266"
+      codeLink="https://github.com/craftykate/beer-temp"
+      description={<p>My foray into physical computing includes this waterproof temperature sensor that monitors the temperature of fermenting beer (or anything else, really), logs the temperature data online and sends a text if the temp goes too high or too low. Gone are the days of ruined beer! Buttons on the top let us change the high and low threshold temps on the fly for different beers or different fermenting stages. RGB LED communicates a whole host of states clearly and effectively with no screen needed. Full project details <a href="https://github.com/craftykate/beer-temp">on GitHub</a>, including link to <a href="https://drive.google.com/open?id=1j1QiglwsgGMnpEcazrR6rpHT8wxJSWbW">short demo video</a>.</p>} />
     <Project
       name="IKEA Name Generator"
       image={ikea}
