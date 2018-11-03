@@ -15,11 +15,19 @@ import recipes from './images/recipes.jpg';
 import chores from './images/chores.jpg';
 import grampa from './images/grampa.jpg';
 import gauge from './images/gauge.jpg';
+import exploreartists from './images/exploreartists.png';
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
     <h2>Featured Projects</h2>
-    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, C++, Axios, Ruby, Rails, PHP</span></p>
+    <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, C++, API requests, Axios, OAuth, Ruby, Rails, PHP</span></p>
+    <Project
+      name="Explore New Artists"
+      image={exploreartists}
+      languages="ReactJS, JavaScript, API requests, HTML/JSX, SCSS, OAuth"
+      codeLink="https://github.com/craftykate/explore-artists"
+      liveLink="https://exploreartists.surge.sh/"
+      description={<p>Explore new artists! I love discovering new music and wanted a way to browse bands based on artists and songs I like. Search for an artist and see a list of similar artists and their genres to explore. Listen to their popular songs in the app or open their page in Spotify. All data pulled from Spotify using Spotify's API, user is logged in securely using OAuth. Built with React. I LOVE this app. I poke around a bit, find a new artist and start listening right in the app.</p>} />
     <Project
       name="Color Picker"
       image={color}
