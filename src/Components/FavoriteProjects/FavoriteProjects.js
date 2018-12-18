@@ -16,11 +16,18 @@ import chores from './images/chores.jpg';
 import grampa from './images/grampa.jpg';
 import gauge from './images/gauge.jpg';
 import exploreartists from './images/exploreartists.png';
+import teencenter from './images/teencenter.png';
 
 const favoriteProjects = () => (
   <div className="favoriteProjects">
     <h2>Featured Projects</h2>
     <p className="languagesUsed">Languages: <span>ReactJS, JavaScript, jQuery, HTML, CSS, SCSS, C++, API requests, Axios, OAuth, Ruby, Rails, PHP</span></p>
+    <Project
+      name="Teen Center Sign In App"
+      image={teencenter}
+      languages="ReactJS, JavaScript, Firebase, Axios, HTML/JSX, SCSS"
+      codeLink="https://github.com/craftykate/teen-center"
+      description={<p>A full-featured registration and sign in app for the local teen center. Students register once then sign in and out on the app using their school ID. Administrators can run the different reports they need to apply for grants and look up and edit student info. Until now, students have been signing in and out on a piece of paper as they come and go. When admin collects the data they need for grants it sometimes takes them months to put all the info from the sign in sheets into a spreadsheet. Now it takes them under a minute! Built in React with a Firebase database. </p>} />
     <Project
       name="Explore New Artists"
       image={exploreartists}
