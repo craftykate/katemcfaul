@@ -24,7 +24,7 @@ const Header = () => {
 
       <ul>
         {links.map((link) => (
-          <li>
+          <li key={link.title}>
             {link.title}:{' '}
             <a href={link.link} target='_blank' rel='noopener noreferrer'>
               {link.linkName}
