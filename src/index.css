@@ -1,13 +1,60 @@
+@import 'Styles/styles.css';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--subAccent);
+  cursor: pointer;
+}
+
+i,
+em {
+  font-style: italic;
+  color: var(--italicGray);
+}
+
+strong {
+  font-weight: bold;
+}
+
+#wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  min-width: 375px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 500px) {
+  #wrapper {
+    width: 100%;
+  }
 }
