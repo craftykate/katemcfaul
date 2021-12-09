@@ -1,5 +1,7 @@
-const Project = () => {
-  return 'Projects'
+import ProjectList from 'Components/Projects/ProjectList'
+
+const Projects = () => {
+  return <ProjectList />
 }
 
-export default Project
+export default Projects

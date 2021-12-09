@@ -1,4 +1,4 @@
-// Packages, CSS, Context, Utils, Data, Components, UI, Components
+// Packages, CSS, Context, Utils, Data, Components, UI, Components, Media
 // Packages
 import { Route, Switch } from 'react-router-dom'
 // Components
