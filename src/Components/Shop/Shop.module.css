@@ -1,0 +1,9 @@
+strong {
+  color: var(--main);
+}
+.pageLink {
+  font-size: 1.2em;
+}
+.pageLink:after {
+  content: ' \2192';
+}

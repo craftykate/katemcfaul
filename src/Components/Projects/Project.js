@@ -43,7 +43,6 @@ const Project = (project) => {
         </div>
         {image}
         <div>{project.description}</div>
-        <div className='clear' />
       </div>
     </Card>
   )

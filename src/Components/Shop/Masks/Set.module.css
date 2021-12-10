@@ -1,0 +1,40 @@
+.fabricSet {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main);
+}
+.title {
+  display: none;
+  font-size: 1.5em;
+  text-align: left;
+  color: var(--main);
+}
+.setImages {
+  margin-right: 10px;
+  max-width: 200px;
+  float: left;
+}
+.stock {
+  margin-bottom: 0;
+  line-height: 1.1em;
+}
+.stock span {
+  color: var(--accent);
+}
+
+@media screen and (max-width: 499px) {
+  .title.topTitle {
+    display: block;
+  }
+  .title.midTitle {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .title.topTitle {
+    display: none;
+  }
+  .title.midTitle {
+    display: block;
+  }
+}

@@ -1,6 +1,6 @@
 import classes from './Card.module.css'
 
-const Card = ({ title, titleType = 'underline', className, children }) => {
+const Card = ({ title, titleType = 'underline', className, id, children }) => {
   const cardClass = [classes.card, classes[className]]
 
   const h3Class = titleType === 'bold' ? 'bold' : 'underline'
@@ -9,9 +9,12 @@ const Card = ({ title, titleType = 'underline', className, children }) => {
   ) : null
 
   return (
-    <section className={cardClass.join(' ')}>
-      {sectionTitle}
-      {children}
+    <section id={id} className={cardClass.join(' ')}>
+      <div>
+        {sectionTitle}
+        {children}
+      </div>
+      <div className='clear' />
     </section>
   )
 }

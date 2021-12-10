@@ -1,15 +1,38 @@
 // Packages, CSS, Context, Utils, Data, Components, UI, Components, Media
 // Packages
-import { Route, Switch } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Route, Switch, useLocation } from 'react-router-dom'
 // Components
 import Layout from './Components/Layout/Layout'
 import Projects from './Pages/Projects'
 import About from './Pages/About'
 import Shop from './Pages/Shop'
-import Masks from 'Components/Shop/Masks'
+import Masks from 'Components/Shop/Masks/Masks'
 import Scrubbies from 'Components/Shop/Scrubbies'
 
 function App() {
+  const { pathname, hash, key } = useLocation()
+
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === '') {
+      window.scrollTo(0, 0)
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '')
+        const element = document.getElementById(id)
+        if (element) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop,
+          })
+        }
+      }, 0)
+    }
+  }, [pathname, hash, key]) // do this on route change
+
   return (
     <Layout>
       <Switch>

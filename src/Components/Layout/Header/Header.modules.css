@@ -31,6 +31,9 @@ header ul:not(.nav) {
     color: var(--text);
   }
 }
+header ul li {
+  text-align: center;
+}
 nav {
   margin-top: 25px;
   margin-bottom: 6px;

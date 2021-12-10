@@ -6,26 +6,22 @@ body {
     Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: 1rem;
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
-
 h1 {
   font-size: 200%;
 }
-
 h2 {
   font-size: 150%;
 }
-
 h3 {
   font-size: 120%;
 }
-
 p {
   text-align: justify;
+  margin-bottom: 0.5rem;
 }
-
 a {
   color: var(--accent);
   text-decoration: none;
@@ -34,7 +30,6 @@ a:hover {
   color: var(--subAccent);
   cursor: pointer;
 }
-
 i,
 em {
   font-style: italic;
@@ -43,6 +38,32 @@ em {
 strong {
   font-weight: bold;
 }
+.strong {
+  font-weight: bold;
+}
+.main {
+  color: var(--main);
+}
+.accent {
+  color: var(--accent);
+}
+.subAccent {
+  color: var(--subAccent);
+}
+img {
+  border-radius: 5px;
+}
+ul li {
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+ul.icon li:before {
+  content: '\272A  ';
+}
+.clear {
+  clear: both;
+}
+
 #wrapper {
   margin: 0 auto;
   padding: 20px;
@@ -56,7 +77,8 @@ strong {
     width: 100%;
   }
 }
-
-.clear {
-  clear: both;
+@media screen and (max-width: 550px) {
+  main p {
+    text-align: left;
+  }
 }
