@@ -34,10 +34,9 @@ const Project = (project) => {
   )
 
   return (
-    <Card>
+    <Card title={project.name} titleType='bold'>
       <div className={classes.project}>
         <div>
-          <h3>{project.name}</h3>
           <p className={classes.projectSkills}>
             Featured Skills: <span>{project.languages}</span>
           </p>

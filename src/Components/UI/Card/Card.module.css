@@ -5,7 +5,16 @@
   border-radius: 0.8rem;
   box-shadow: 3px 3px 5px #e6e6e6;
 }
-
+.card h3.bold {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  color: var(--main);
+}
+.card h3.underline {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  border-bottom: 1px solid #23c2bd;
+}
 .card img {
   max-width: 100%;
 }
