@@ -22,7 +22,7 @@ const ProjectList = () => (
     <Project
       name='Teen Center Sign In App'
       image={teenCenter}
-      languages='ReactJS, JavaScript, Firebase, Axios, HTML/JSX, SCSS'
+      languages='React, JavaScript, Firebase, Axios, HTML/JSX, SCSS'
       codeLink='https://github.com/craftykate/teen-center'
       description={
         <p>
@@ -41,7 +41,7 @@ const ProjectList = () => (
     <Project
       name='Explore New Artists'
       image={exploreArtists}
-      languages='ReactJS, JavaScript, API requests, HTML/JSX, SCSS, OAuth'
+      languages='React, JavaScript, API requests, HTML/JSX, SCSS, OAuth'
       codeLink='https://github.com/craftykate/explore-artists'
       liveLink='https://exploreartists.surge.sh/'
       description={
@@ -59,7 +59,7 @@ const ProjectList = () => (
     <Project
       name='Color Picker'
       image={color}
-      languages='ReactJS, JavaScript, HTML/JSX, SCSS'
+      languages='React, JavaScript, HTML/JSX, SCSS'
       codeLink='https://github.com/craftykate/color-picker'
       liveLink='http://katescolorpicker.surge.sh/'
       description={
@@ -90,7 +90,7 @@ const ProjectList = () => (
     <Project
       name='Paper Calculators'
       image={paper}
-      languages='ReactJS, JavaScript, HTML/JSX, SCSS'
+      languages='React, JavaScript, HTML/JSX, SCSS'
       codeLink='https://github.com/craftykate/paper-calculators'
       liveLink='http://kates-paper-calculators.surge.sh/'
       description={
@@ -130,7 +130,7 @@ const ProjectList = () => (
     <Project
       name='IKEA Name Generator'
       image={ikea}
-      languages='ReactJS, JavaScript, HTML/JSX, CSS'
+      languages='React, JavaScript, HTML/JSX, CSS'
       codeLink='https://github.com/craftykate/ikea-name-generator'
       liveLink='http://ikea-name-generator.surge.sh/'
       description={
@@ -208,7 +208,7 @@ const ProjectList = () => (
     <Project
       name='Gauge Calculator'
       image={gauge}
-      languages='ReactJS, JavaScript, HTML/JSX, SCSS'
+      languages='React, JavaScript, HTML/JSX, SCSS'
       codeLink='https://github.com/craftykate/gauge-calculator'
       liveLink='http://gaugecalculator.surge.sh/'
       description={
@@ -254,7 +254,7 @@ const ProjectList = () => (
     <Project
       name='Chores App'
       image={chores}
-      languages='ReactJS, JavaScript, HTML/JSX, SCSS, Axios'
+      languages='React, JavaScript, HTML/JSX, SCSS, Axios'
       codeLink='https://github.com/craftykate/boyschores'
       description={
         <p>
@@ -286,7 +286,7 @@ const ProjectList = () => (
     />
     <Project
       name='This Site!'
-      languages='ReactJS, JavaScript, HTML/JSX, CSS'
+      languages='React, JavaScript, HTML/JSX, CSS'
       codeLink='https://github.com/craftykate/katemcfaul'
       description={
         <p>

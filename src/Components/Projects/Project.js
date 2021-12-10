@@ -7,7 +7,9 @@ import TextLink from 'Components/UI/Link/TextLink'
 
 const Project = (project) => {
   let image = project.image ? (
-    <img src={project.image} alt={project.name} />
+    <div className={cardClasses.img}>
+      <img src={project.image} alt={project.name} />
+    </div>
   ) : null
 
   const codeLink = (
@@ -39,7 +41,7 @@ const Project = (project) => {
             {codeLink} {liveLink}
           </p>
         </div>
-        <div className={cardClasses.img}>{image}</div>
+        {image}
         <div>{project.description}</div>
         <div className='clear' />
       </div>

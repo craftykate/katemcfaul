@@ -40,11 +40,9 @@ em {
   font-style: italic;
   color: var(--mediumGray);
 }
-
 strong {
   font-weight: bold;
 }
-
 #wrapper {
   margin: 0 auto;
   padding: 20px;

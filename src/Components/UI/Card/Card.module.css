@@ -16,6 +16,12 @@
   font-size: 1.5em;
   border-bottom: 1px solid #23c2bd;
 }
+.card .subheader {
+  font-weight: bold;
+}
+.card .subheader span {
+  color: var(--main);
+}
 .card img {
   max-width: 100%;
 }
