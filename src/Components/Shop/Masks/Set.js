@@ -14,7 +14,11 @@ const Set = ({ title, images, stock, sizeOptions }) => {
       {Object.keys(sizeOptions).map((key) => {
         const fullName = sizeOptions[key]
         const amount =
-          stock && stock[fullName] ? stock[fullName] : 'OUT OF STOCK'
+          stock && stock[fullName] ? (
+            `${stock[fullName]} sets`
+          ) : (
+            <span className={classes.out}>Out of stock</span>
+          )
         return (
           <p className={classes.stock}>
             <span>{fullName}:</span> {amount}

@@ -18,10 +18,12 @@
   margin-bottom: 0;
   line-height: 1.1em;
 }
-.stock span {
+.stock span:not(.out) {
   color: var(--accent);
 }
-
+.stock span.out {
+  color: var(--lightGray);
+}
 @media screen and (max-width: 499px) {
   .title.topTitle {
     display: block;
