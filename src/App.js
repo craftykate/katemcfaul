@@ -6,6 +6,8 @@ import Layout from './Components/Layout/Layout'
 import Projects from './Pages/Projects'
 import About from './Pages/About'
 import Shop from './Pages/Shop'
+import Masks from 'Components/Shop/Masks'
+import Scrubbies from 'Components/Shop/Scrubbies'
 
 function App() {
   return (
@@ -17,8 +19,14 @@ function App() {
         <Route path='/about'>
           <About />
         </Route>
-        <Route path='/shop'>
+        <Route exact path='/shop'>
           <Shop />
+        </Route>
+        <Route path='/shop/masks'>
+          <Masks />
+        </Route>
+        <Route path='/shop/scrubbies'>
+          <Scrubbies />
         </Route>
       </Switch>
     </Layout>

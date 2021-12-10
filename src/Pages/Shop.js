@@ -1,5 +1,7 @@
+import Categories from 'Components/Shop/Categories'
+
 const Shop = () => {
-  return 'Shop'
+  return <Categories />
 }
 
 export default Shop

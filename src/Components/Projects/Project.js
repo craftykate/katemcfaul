@@ -2,7 +2,7 @@
 import classes from './Project.module.css'
 // Components
 import Card from 'Components/UI/Card/Card'
-import Link from 'Components/UI/Link/Link'
+import TextLink from 'Components/UI/Link/TextLink'
 
 const Project = (project) => {
   const contentBoxClass = project.image
@@ -16,7 +16,7 @@ const Project = (project) => {
   ) : null
 
   const codeLink = (
-    <Link
+    <TextLink
       href={project.codeLink}
       name='(Link to code)'
       className={classes.codeLink}
@@ -25,7 +25,7 @@ const Project = (project) => {
   )
 
   const liveLink = (
-    <Link
+    <TextLink
       href={project.liveLink}
       name='(See it live)'
       className={classes.liveLink}
