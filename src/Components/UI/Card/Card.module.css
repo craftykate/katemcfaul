@@ -19,3 +19,15 @@
 .card img {
   max-width: 100%;
 }
+.card .img {
+  max-width: 300px;
+  margin: 0 auto 10px auto;
+}
+@media screen and (min-width: 500px) {
+  .card .img {
+    display: inline;
+    width: 200px;
+    margin-right: 10px;
+    float: left;
+  }
+}

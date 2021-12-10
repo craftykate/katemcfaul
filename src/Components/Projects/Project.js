@@ -1,18 +1,13 @@
 // CSS
 import classes from './Project.module.css'
+import cardClasses from 'Components/UI/Card/Card.module.css'
 // Components
 import Card from 'Components/UI/Card/Card'
 import TextLink from 'Components/UI/Link/TextLink'
 
 const Project = (project) => {
-  const contentBoxClass = project.image
-    ? [classes.description, classes.hasImage]
-    : [classes.description]
-
   let image = project.image ? (
-    <div className={classes.imageBox}>
-      <img src={project.image} alt={project.name} />
-    </div>
+    <img src={project.image} alt={project.name} />
   ) : null
 
   const codeLink = (
@@ -36,16 +31,16 @@ const Project = (project) => {
   return (
     <Card title={project.name} titleType='bold'>
       <div className={classes.project}>
-        <div>
+        <div className={classes.info}>
           <p className={classes.projectSkills}>
             Featured Skills: <span>{project.languages}</span>
           </p>
-          <div className={classes.links}>
+          <p>
             {codeLink} {liveLink}
-          </div>
+          </p>
         </div>
-        <div className={contentBoxClass.join(' ')}>{project.description}</div>
-        {image}
+        <div className={cardClasses.img}>{image}</div>
+        <div>{project.description}</div>
         <div className='clear' />
       </div>
     </Card>

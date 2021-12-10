@@ -1,6 +1,5 @@
-.project h3 {
-  color: var(--main);
-  font-size: 2em;
+.project .info {
+  margin-bottom: 0.8rem;
 }
 .project .projectSkills {
   color: var(--gray);
@@ -10,26 +9,6 @@
   font-weight: bold;
 }
 
-.project .links {
-  margin-bottom: 0.8rem;
-}
-
 .project .description {
   margin-bottom: 0.8rem;
-}
-
-.project .hasImage .description {
-  margin-bottom: 0px;
-}
-
-@media screen and (min-width: 500px) {
-  .project .imageBox {
-    width: 200px;
-    margin-right: 10px;
-    float: left;
-  }
-  .project .hasImage {
-    display: inline-block;
-    width: calc(100% - 210px);
-  }
 }
