@@ -2,13 +2,18 @@
 // Packages
 import { useEffect } from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
+import ReactGA from 'react-ga'
 // Components
 import Layout from './Components/Layout/Layout'
 import Projects from './Pages/Projects'
 import About from './Pages/About'
 import Shop from './Pages/Shop'
 import Masks from 'Components/Shop/Masks/Masks'
-import Scrubbies from 'Components/Shop/Scrubbies'
+import Scrubbies from 'Components/Shop/Scrubbies/Scrubbies'
+
+// initialize google analytics
+ReactGA.initialize('UA-1632848-21')
+ReactGA.pageview('app')
 
 function App() {
   const { pathname, hash, key } = useLocation()

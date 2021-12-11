@@ -138,6 +138,30 @@ const Masks = () => {
           approximate and there's plenty of overlap in ages each mask can fit.
         </p>
       </Card>
+      <Card title='Elastic Stoppers' id='stoppers'>
+        <div className={cardClasses.img}>
+          <img src={stoppers} alt='Stoppers' />
+        </div>
+        <p>
+          I 3D print these fabulous elastic stoppers using flexible filament
+          that make it very easy to adjust your masks. I love them the most when
+          I'm putting on my toddler's mask - even when he's on the move I can
+          easily put his mask on and adjust it. If I'm wearing a hat or have my
+          hair in a ponytail it's nice to slide the stopper up and down instead
+          of having to untie and retie the elastic.
+        </p>
+        <p>
+          <strong>Price: $1 per mask set.</strong>
+        </p>
+        <p>
+          <i>
+            (These can be washed, I wash mine all the time, but they don't like
+            high heat. They can probably stand up to 150°F, so they can probably
+            go in a dryer on low, but I haven't tested that. I air dry all our
+            masks to extend the life of the masks, wires, elastic and stoppers.)
+          </i>
+        </p>
+      </Card>
       <Card title='Mask Fabric Options' id='fabrics'>
         <Set
           title='Green and orange stripes'
@@ -201,30 +225,6 @@ const Masks = () => {
           images={[bugs_lk, bugs_lk_1]}
           sizeOptions={sizeOptions}
         />
-      </Card>
-      <Card title='Elastic Stoppers' id='stoppers'>
-        <div className={cardClasses.img}>
-          <img src={stoppers} alt='Stoppers' />
-        </div>
-        <p>
-          I 3D print these fabulous elastic stoppers using flexible filament
-          that make it very easy to adjust your masks. I love them the most when
-          I'm putting on my toddler's mask - even when he's on the move I can
-          easily put his mask on and adjust it. If I'm wearing a hat or have my
-          hair in a ponytail it's nice to slide the stopper up and down instead
-          of having to untie and retie the elastic.
-        </p>
-        <p>
-          <strong>Price: $1 per mask set.</strong>
-        </p>
-        <p>
-          <i>
-            (These can be washed, I wash mine all the time, but they don't like
-            high heat. They can probably stand up to 150°F, so they can probably
-            go in a dryer on low, but I haven't tested that. I air dry all our
-            masks to extend the life of the masks, wires, elastic and stoppers.)
-          </i>
-        </p>
       </Card>
       <Card title='Extra Filters' id='filters'>
         <div className={cardClasses.img}>

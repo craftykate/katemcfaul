@@ -1,4 +1,4 @@
-.fabricSet:not(:last-child) {
+.scrubbySet:not(:last-child) {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--main);
@@ -9,20 +9,8 @@
   text-align: left;
   color: var(--main);
 }
-.setImages {
-  margin-right: 10px;
-  max-width: 200px;
-  float: left;
-}
-.stock {
+p.description {
   margin-bottom: 0;
-  line-height: 1.1em;
-}
-.stock span:not(.out) {
-  color: var(--accent);
-}
-.stock span.out {
-  color: var(--lightGray);
 }
 @media screen and (max-width: 499px) {
   .title.topTitle {
