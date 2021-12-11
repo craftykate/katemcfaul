@@ -1,5 +1,5 @@
 // CSS
-import '../Shop.module.css'
+import classes from '../Shop.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
 // Packages
 import { Link } from 'react-router-dom'
@@ -163,17 +163,19 @@ const Masks = () => {
         </p>
       </Card>
       <Card title='Mask Fabric Options' id='fabrics'>
-        <p>
-          <i>(Each set of masks comes with the two masks pictured)</i>
-        </p>
-        <p>
-          <strong>Note about stock:</strong> I used to maintain in stock a
-          handful of masks in each size, but almost ran out completely after a
-          large amount of orders at the start of the 2021 school year. I know
-          some people (and especially their kids!) depend on my masks, so I've
-          been trying to make enough now for occasional orders, so message me to
-          get on the list for my next batch.
-        </p>
+        <div className={classes.fabricInfo}>
+          <p>
+            <i>(Each set of masks comes with the two masks pictured)</i>
+          </p>
+          <p>
+            <strong>Note about stock:</strong> I used to maintain in stock a
+            handful of masks in each size, but almost ran out completely after a
+            large amount of orders at the start of the 2021 school year. I know
+            some people (and especially their kids!) depend on my masks, so I've
+            been trying to make enough now for occasional orders, so message me
+            to get on the list for my next batch.
+          </p>
+        </div>
         <Set
           title='Green and orange stripes'
           images={[bold_stripes_adult, bold_stripes_adult_1]}
