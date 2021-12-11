@@ -5,7 +5,7 @@ import Card from 'Components/UI/Card/Card'
 
 const Work = () => {
   return (
-    <Card title='Sr. Full-Stack Software Engineer'>
+    <Card title='Senior Full-Stack Software Engineer'>
       <p className={cardClasses.subheader}>Hard Skills</p>
       <p>
         I have worked professionally in React and PHP. I have built powerful
