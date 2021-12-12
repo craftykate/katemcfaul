@@ -13,15 +13,17 @@ const Set = ({ title, images, stock, sizeOptions }) => {
       <p className={[classes.title, classes.midTitle].join(' ')}>{title}</p>
       {Object.keys(sizeOptions).map((key) => {
         const fullName = sizeOptions[key]
-        const amount =
+        const amount = stock && stock[fullName] ? stock[fullName] : null
+        const setText = amount && amount > 1 ? 'sets' : 'set'
+        const sets =
           stock && stock[fullName] ? (
-            `${stock[fullName]} sets`
+            `${amount} ${setText}`
           ) : (
             <span className={classes.out}>Out of stock</span>
           )
         return (
           <p className={classes.stock} key={key}>
-            <span>{fullName}:</span> {amount}
+            <span>{fullName}:</span> {sets}
           </p>
         )
       })}
