@@ -1,0 +1,19 @@
+footer {
+  border-top: 1px solid var(--accent);
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: center;
+  clear: both;
+  color: var(--lightGray);
+}
+footer ul li {
+  display: inline;
+}
+footer ul li a {
+  color: inherit;
+  text-decoration: underline;
+}
+footer ul li:not(:first-child)::before {
+  content: ' | ';
+  color: var(--lightGray);
+}

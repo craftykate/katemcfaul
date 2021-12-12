@@ -82,22 +82,3 @@ ul.icon li:before {
     text-align: left;
   }
 }
-footer {
-  border-top: 1px solid #e5007a;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  text-align: center;
-  clear: both;
-  color: #545252;
-}
-footer ul li {
-  display: inline;
-}
-footer ul li a {
-  color: inherit;
-  text-decoration: underline;
-}
-footer ul li:not(:first-child)::before {
-  content: ' | ';
-  color: #545252;
-}
