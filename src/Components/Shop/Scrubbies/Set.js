@@ -10,7 +10,7 @@ const Set = ({ title, image, children }) => {
         <img src={image} alt={title} />
       </div>
       <p className={[classes.title, classes.midTitle].join(' ')}>{title}</p>
-      <p className={classes.description}>{children}</p>
+      <span className={classes.description}>{children}</span>
       <div className='clear' />
     </section>
   )

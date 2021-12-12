@@ -20,7 +20,7 @@ const Set = ({ title, images, stock, sizeOptions }) => {
             <span className={classes.out}>Out of stock</span>
           )
         return (
-          <p className={classes.stock}>
+          <p className={classes.stock} key={key}>
             <span>{fullName}:</span> {amount}
           </p>
         )

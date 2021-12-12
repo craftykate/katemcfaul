@@ -1,4 +1,4 @@
-// Packages, CSS, Context, Utils, Data, Components, UI, Components, Media
+// Packages, CSS, Context, Utils, Data, Components, UI, Components, Media, Data
 // Packages
 import { useEffect } from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
