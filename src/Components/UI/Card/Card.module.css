@@ -4,6 +4,7 @@
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   box-shadow: 3px 3px 5px #e6e6e6;
+  /* background-color: white; */
 }
 .card h3.bold {
   font-size: 1.7em;

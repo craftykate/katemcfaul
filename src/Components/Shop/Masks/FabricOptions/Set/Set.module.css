@@ -18,7 +18,7 @@
   margin-bottom: 0;
   line-height: 1.1em;
 }
-.stock span:not(.out) {
+.stock span.size {
   color: var(--accent);
 }
 .stock span.out {

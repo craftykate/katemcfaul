@@ -1,0 +1,15 @@
+.buttons {
+  margin-left: 10px;
+}
+.buttons button {
+  display: inline-block;
+}
+.buttons .minus {
+  margin-right: 0.2rem;
+}
+.buttons .plus {
+  margin-left: 0.2rem;
+}
+.amount {
+  color: var(--main);
+}

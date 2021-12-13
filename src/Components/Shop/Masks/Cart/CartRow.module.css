@@ -1,0 +1,24 @@
+.row {
+  margin-bottom: 4px;
+}
+.row img {
+  margin-right: 0.5rem;
+  width: 50px;
+  vertical-align: middle;
+}
+.title {
+  color: var(--main);
+}
+.size {
+  color: var(--subAccent);
+}
+.buttons {
+  display: inline-block;
+  margin-right: 5px;
+}
+.buttons .minus {
+  margin-right: 0.2rem;
+}
+.buttons .plus {
+  margin-left: 0.2rem;
+}

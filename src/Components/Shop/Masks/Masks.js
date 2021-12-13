@@ -2,54 +2,84 @@
 import classes from '../Shop.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
 // Packages
-import { Link } from 'react-router-dom'
+import React from 'react'
 // Components
 import Card from 'Components/UI/Card/Card'
-import Set from './Set'
+import OrderInfo from './OrderInfo.js/OrderInfo'
+import FabricOptions from './FabricOptions/FabricOptions'
+import Cart from './Cart/Cart'
 // Media
 import veggie_k_and_k from '../img/masks/veggie_k_and_k.jpg'
 import assorted_boys from '../img/masks/assorted_boys.jpg'
 import filters from '../img/masks/filters.jpg'
 import stoppers from '../img/masks/stoppers.jpg'
-// Data
-import { sizeOptions, allMasks } from './Data'
 
 const Masks = () => {
+  const [cartItems, setCartItems] = React.useState([])
+  const [addStoppers, setAddStoppers] = React.useState(false)
+  const [showCart, setShowCart] = React.useState(false)
+
+  const emptyCart = () => {
+    setCartItems([])
+  }
+
+  const adjustItemInCart = (e) => {
+    const newItem = e.target.dataset
+    console.log(newItem)
+    const action = e.target.name
+
+    setCartItems((prevState) => {
+      const existingIndex = prevState.findIndex(
+        (item) =>
+          item.fabric_title === newItem.fabric_title &&
+          item.size === newItem.size
+      )
+      let updatedState = [...prevState]
+      if (existingIndex >= 0) {
+        const prevAmount = updatedState[existingIndex].orderAmount || 0
+        const newAmount =
+          action === 'increase'
+            ? prevAmount + 1
+            : action === 'decrease'
+            ? prevAmount - 1
+            : prevAmount
+
+        if (newAmount === 0) {
+          updatedState.splice(existingIndex, 1)
+        } else {
+          updatedState[existingIndex] = {
+            ...e.target.dataset,
+            orderAmount: newAmount,
+          }
+        }
+      } else {
+        updatedState = [...prevState, { ...e.target.dataset, orderAmount: 1 }]
+      }
+      return updatedState
+    })
+  }
+
+  const toggleCartView = () => {
+    setShowCart((prevState) => !prevState)
+  }
+
   return (
     <>
-      <Card title='Placing an Order'>
-        <strong>Prices:</strong>
-        <ul className='icon'>
-          <li>
-            <span className='subAccent'>Masks:</span>{' '}
-            <span className='main'>$20 each set</span> Masks come in a set of
-            two, in coordinating fabrics.{' '}
-            <Link to='#fabrics'>(Jump to sets in stock)</Link>
-          </li>
-          <li>
-            <span className='subAccent'>Stoppers:</span>{' '}
-            <span className='main'>$1 per set</span> Optional elastic stoppers
-            help tighten your mask in a jiffy.{' '}
-            <Link to='#stoppers'>(See more info)</Link>
-          </li>
-          <li>
-            <span className='subAccent'>Extra filters:</span>{' '}
-            <span className='main'>$5 for 4</span> Optional extra filter packs
-            come in a four pack cut to the size you need.{' '}
-            <Link to='#filters'>(See more info)</Link>
-          </li>
-        </ul>
-        <p>
-          <strong>How to Buy:</strong>
-          <br /> I don't have a lot of time to make extra inventory, so sales
-          are usually limited to people I know. So, if you know how to contact
-          me and you're interested in ordering masks, send me a message! Let me
-          know <span className='main'>which fabric set</span> you want (by name
-          of set or screenshot), <span className='main'>which size</span> you
-          want it in (sizing guide below), and if you want the{' '}
-          <span className='main'>elastic stoppers</span>.
-        </p>
-      </Card>
+      {showCart && (
+        <Cart
+          setShowCart={setShowCart}
+          emptyCart={emptyCart}
+          cartItems={cartItems}
+          adjustItemInCart={adjustItemInCart}
+          addStoppers={addStoppers}
+          setAddStoppers={setAddStoppers}
+        />
+      )}
+      <OrderInfo
+        cartItems={cartItems}
+        toggleCartView={toggleCartView}
+        setShowCart={setShowCart}
+      />
       <Card title='Mask Details'>
         <div className={cardClasses.img}>
           <img src={veggie_k_and_k} alt='Adult masks' />
@@ -147,15 +177,10 @@ const Masks = () => {
             to get on the list for my next batch.
           </p>
         </div>
-        {allMasks.map((set) => (
-          <Set
-            title={set.title}
-            images={set.images}
-            stock={set.stock}
-            sizeOptions={sizeOptions}
-            key={set.title}
-          />
-        ))}
+        <FabricOptions
+          cartItems={cartItems}
+          adjustItemInCart={adjustItemInCart}
+        />
       </Card>
       <Card title='Extra Filters' id='filters'>
         <div className={cardClasses.img}>
