@@ -25,7 +25,6 @@ const Masks = () => {
 
   const adjustItemInCart = (e) => {
     const newItem = e.target.dataset
-    console.log(newItem)
     const action = e.target.name
 
     setCartItems((prevState) => {

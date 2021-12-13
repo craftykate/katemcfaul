@@ -9,7 +9,7 @@
 .title {
   color: var(--main);
 }
-.size {
+.sizeName {
   color: var(--subAccent);
 }
 .buttons {
@@ -21,4 +21,13 @@
 }
 .buttons .plus {
   margin-left: 0.2rem;
+}
+@media screen and (max-width: 515px) {
+  .title {
+    display: block;
+  }
+  .size {
+    display: block;
+    margin-bottom: 1em;
+  }
 }
