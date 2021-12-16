@@ -2,7 +2,7 @@
 import classes from '../Shop.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
 // Packages
-import React from 'react'
+import React, { useEffect } from 'react'
 // Components
 import Card from 'Components/UI/Card/Card'
 import OrderInfo from './OrderInfo.js/OrderInfo'
@@ -20,6 +20,7 @@ const Masks = () => {
   const [showCart, setShowCart] = React.useState(false)
 
   const emptyCart = () => {
+    localStorage.removeItem('cart')
     setCartItems([])
   }
 
@@ -54,6 +55,7 @@ const Masks = () => {
       } else {
         updatedState = [...prevState, { ...e.target.dataset, orderAmount: 1 }]
       }
+      localStorage.setItem('cart', JSON.stringify(updatedState))
       return updatedState
     })
   }
@@ -61,6 +63,13 @@ const Masks = () => {
   const toggleCartView = () => {
     setShowCart((prevState) => !prevState)
   }
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem('cart')
+    if (storedCart) {
+      setCartItems(JSON.parse(storedCart))
+    }
+  }, [])
 
   return (
     <>
