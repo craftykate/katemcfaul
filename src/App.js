@@ -1,6 +1,6 @@
 // Packages, CSS, Context, Utils, Data, Components, UI, Components, Media, Data
 // Packages
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import ReactGA from 'react-ga'
 // Components
@@ -10,12 +10,14 @@ import About from './Pages/About'
 import Shop from './Pages/Shop'
 import Masks from 'Components/Shop/Masks/Masks'
 import Scrubbies from 'Components/Shop/Scrubbies/Scrubbies'
+import Admin from 'Components/Admin/Admin'
 
 // initialize google analytics
 ReactGA.initialize('UA-1632848-21')
 ReactGA.pageview('app')
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false)
   const { pathname, hash, key } = useLocation()
 
   useEffect(() => {
@@ -55,6 +57,9 @@ function App() {
         </Route>
         <Route path='/shop/scrubbies'>
           <Scrubbies />
+        </Route>
+        <Route path='/admin'>
+          <Admin isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </Route>
       </Switch>
     </Layout>

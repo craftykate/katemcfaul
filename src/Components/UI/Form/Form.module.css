@@ -1,0 +1,21 @@
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0.8rem;
+}
+
+.form div {
+  margin-bottom: 10px;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.2rem;
+  outline: none;
+  border: 1px solid var(--lightGray);
+  border-radius: 5px;
+}
+
+.form input.invalid {
+  border: 1px solid red;
+}
