@@ -4,6 +4,17 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import 'Utils/Config/default'
+
+// Hide most logs in prod. Let info and error through
+if (process.env.REACT_APP_ENV === 'PROD') {
+  console.log = () => {}
+  console.debug = () => {}
+  console.warn = () => {}
+  console.time = () => {}
+  console.timeLog = () => {}
+  console.timeEnd = () => {}
+}
 
 ReactDOM.render(
   <React.StrictMode>

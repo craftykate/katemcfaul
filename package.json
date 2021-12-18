@@ -1,11 +1,12 @@
 {
-  "name": "katemcfaul-2021-updated",
+  "name": "katemcfaul-2022",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
@@ -16,8 +17,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/200.html",
+    "build_local": "react-scripts build && mkdir -p builds && mv -f build builds/local",
+    "build_prod": "react-scripts build && mkdir -p builds && mv -f build builds/prod",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:local": "env-cmd -f .env.local react-scripts start",
+    "build:local": "env-cmd -f .env.local npm run-script build_local",
+    "build:prod": "env-cmd -f .env.prod npm run-script build_prod"
   },
   "eslintConfig": {
     "extends": [
