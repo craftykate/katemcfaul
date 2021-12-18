@@ -1,9 +1,9 @@
-// CSS
-import classes from './Modal.module.css'
 // Packages
 import ReactDOM from 'react-dom'
+// CSS
+import classes from './Modal.module.css'
 // UI
-import Card from '../Card/Card'
+import Card from 'Components/UI/Card/Card'
 
 const ModalOverlay = ({ backgroundClose, doNotClose, children }) => {
   return (

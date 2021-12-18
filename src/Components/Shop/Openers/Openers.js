@@ -1,5 +1,6 @@
+// Packages
 import React from 'react'
-
+// Media
 import opener from '../img/openers/opener.JPG'
 import opener_bags from '../img/openers/opener_bags.JPG'
 import opener_light from '../img/openers/opener_light.JPG'

@@ -1,3 +1,4 @@
+// Components
 import ProjectList from 'Components/Projects/ProjectList'
 
 const Projects = () => {

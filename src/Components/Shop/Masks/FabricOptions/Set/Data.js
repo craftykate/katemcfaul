@@ -1,3 +1,4 @@
+// Media
 import bold_stripes_adult from '../../../img/masks/bold_stripes_adult.jpg'
 import bold_stripes_adult_1 from '../../../img/masks/bold_stripes_adult_1.jpg'
 import camo_adult from '../../../img/masks/camo_adult.jpg'

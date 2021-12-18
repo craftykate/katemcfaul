@@ -1,9 +1,9 @@
 // CSS
-import classes from '../Set.module.css'
+import classes from 'Components/Shop/Masks/FabricOptions/Set/Set.module.css'
 // Components
 import UpdateButtons from './UpdateButtons'
 // Data
-import { sizeOptions } from '../Data'
+import { sizeOptions } from 'Components/Shop/Masks/FabricOptions/Set/Data'
 
 const Stock = ({
   sizesInStock,

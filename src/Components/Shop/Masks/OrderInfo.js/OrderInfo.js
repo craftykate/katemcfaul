@@ -1,7 +1,7 @@
-// CSS
-import buttonClasses from 'Components/UI/Button/Button.module.css'
 // Packages
 import { Link } from 'react-router-dom'
+// CSS
+import buttonClasses from 'Components/UI/Button/Button.module.css'
 // Components
 import Card from 'Components/UI/Card/Card'
 // UI

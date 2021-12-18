@@ -1,8 +1,8 @@
-// CSS
-import classes from '../Shop.module.css'
-import cardClasses from 'Components/UI/Card/Card.module.css'
 // Packages
 import React, { useEffect } from 'react'
+// CSS
+import classes from 'Components/Shop/Shop.module.css'
+import cardClasses from 'Components/UI/Card/Card.module.css'
 // Components
 import Card from 'Components/UI/Card/Card'
 import OrderInfo from './OrderInfo.js/OrderInfo'
