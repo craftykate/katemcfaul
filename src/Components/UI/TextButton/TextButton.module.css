@@ -1,0 +1,7 @@
+.textButton {
+  color: var(--accent);
+  cursor: pointer;
+}
+.textButton:hover {
+  text-decoration: underline;
+}

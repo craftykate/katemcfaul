@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import 'Utils/Config/default'
+import { AuthContextProvider } from 'Context/auth-context'
 
 // Hide most logs in prod. Let info and error through
 if (process.env.REACT_APP_ENV === 'PROD') {
@@ -19,7 +20,9 @@ if (process.env.REACT_APP_ENV === 'PROD') {
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

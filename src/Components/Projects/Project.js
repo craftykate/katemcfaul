@@ -3,7 +3,7 @@ import classes from './Project.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
 // Components
 import Card from 'Components/UI/Card/Card'
-import TextLink from 'Components/UI/Link/TextLink'
+import TextLink from 'Components/UI/TextLink/TextLink'
 
 const Project = (project) => {
   let image = project.image ? (

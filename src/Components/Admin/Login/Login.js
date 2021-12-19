@@ -1,5 +1,7 @@
 // Packages
 import React from 'react'
+// Context
+import AuthContext from 'Context/auth-context'
 // Utils
 import config from 'Utils/Config/default'
 // Components
@@ -51,7 +53,8 @@ const passwordReducer = (state, action) => {
   return { ...initialPassword }
 }
 
-const Login = ({ setIsLoggedIn }) => {
+const Login = () => {
+  const auth = React.useContext(AuthContext)
   // Whether or not form is valid
   const [formIsValid, setFormIsValid] = React.useState(false)
   // Set up email info and dispatch
@@ -102,7 +105,7 @@ const Login = ({ setIsLoggedIn }) => {
   // Submit form
   const submitHandler = (e) => {
     e.preventDefault()
-    setIsLoggedIn(true)
+    auth.onLogin(emailState.value)
   }
 
   return (

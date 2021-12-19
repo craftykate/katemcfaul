@@ -1,4 +1,4 @@
-const Link = ({ href, name, className = null, target = null }) => {
+const TextLink = ({ href, name, className = null, target = null }) => {
   return href && name ? (
     <a
       href={href}
@@ -11,4 +11,4 @@ const Link = ({ href, name, className = null, target = null }) => {
   ) : null
 }
 
-export default Link
+export default TextLink

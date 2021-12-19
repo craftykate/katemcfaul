@@ -57,6 +57,10 @@ nav ul li a:hover {
 nav ul li a.active {
   background-color: var(--accent);
 }
+header .user {
+  text-align: right;
+  font-size: 0.8rem;
+}
 @media screen and (max-width: 445px) {
   nav ul li {
     display: block;

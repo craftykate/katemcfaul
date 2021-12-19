@@ -17,7 +17,6 @@ ReactGA.initialize('UA-1632848-21')
 ReactGA.pageview('app')
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false)
   const { pathname, hash, key } = useLocation()
 
   useEffect(() => {
@@ -59,7 +58,7 @@ function App() {
           <Scrubbies />
         </Route>
         <Route path='/admin'>
-          <Admin isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          <Admin />
         </Route>
       </Switch>
     </Layout>
