@@ -39,7 +39,7 @@ const useCustomFetch = () => {
 
 export const getConfig = (apiCall, method = 'GET', body = null) => {
   return {
-    url: `${config.baseUrl}/${apiCall}.json`,
+    url: `${config.apiBaseUrl}/${apiCall}.json`,
     method,
     headers: {
       'Content-Type': 'application/json',
