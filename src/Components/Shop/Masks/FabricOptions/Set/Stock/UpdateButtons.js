@@ -1,5 +1,9 @@
+// Packages
+import React from 'react'
 // CSS
 import classes from './UpdateButtons.module.css'
+// Context
+import AuthContext from 'Context/auth-context'
 // UI
 import Button from 'Components/UI/Button/Button'
 
@@ -11,6 +15,9 @@ const UpdateButtons = ({
   numberInCart,
   adjustItemInCart,
 }) => {
+  const auth = React.useContext(AuthContext)
+  if (auth.isLoggedIn) return null
+
   const data = {
     'data-size': fullSizeName,
     'data-fabric_title': fabric_title,

@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 // CSS
 import classes from 'Components/Shop/Shop.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
+// Utils
+import useCustomFetch, { getConfig } from 'Utils/Data'
 // Components
 import Card from 'Components/UI/Card/Card'
 import OrderInfo from './OrderInfo.js/OrderInfo'
@@ -16,8 +18,40 @@ import stoppers from '../img/masks/stoppers.jpg'
 
 const Masks = () => {
   const [cartItems, setCartItems] = React.useState([])
+  const [inventory, setInventory] = React.useState({})
   const [addStoppers, setAddStoppers] = React.useState(false)
   const [showCart, setShowCart] = React.useState(false)
+  const { isLoading, error, sendFetch: fetchInventory } = useCustomFetch()
+  const { sendFetch: adjustInventory } = useCustomFetch()
+
+  // Fetch inventory of masks when page loads
+  React.useEffect(() => {
+    // What to do with data we get back
+    const parseInventory = (inventory) => {
+      const parsedInventory = inventory || []
+      console.debug('parsedInventory', parsedInventory)
+      setInventory(parsedInventory)
+    }
+    // Get the fetch config details, then do the actual fetching
+    const fetchConfig = getConfig('inventory')
+    fetchInventory(fetchConfig, parseInventory)
+  }, [fetchInventory]) // This is a useCallback so it won't create an endless loop
+
+  // What to do with data we get back from adjusting inventory
+  const updateInventory = (color, data) => {
+    const size = Object.keys(data)[0]
+    const inventoryCopy = { ...inventory }
+    inventoryCopy[color][size] = data[size]
+    setInventory(inventoryCopy)
+  }
+
+  // Adjust inventory in both db and use data back
+  const adjustInventoryHandler = async (color, size, amount) => {
+    const colorLink = color.replace(/\s/g, '%20')
+    const body = { [size]: amount }
+    const fetchConfig = getConfig(`inventory/${colorLink}`, 'PUT', body)
+    adjustInventory(fetchConfig, updateInventory.bind(null, color))
+  }
 
   const emptyCart = () => {
     localStorage.removeItem('cart')
@@ -188,6 +222,10 @@ const Masks = () => {
         <FabricOptions
           cartItems={cartItems}
           adjustItemInCart={adjustItemInCart}
+          isLoadingInventory={isLoading}
+          inventoryError={error}
+          inventory={inventory}
+          adjustInventoryHandler={adjustInventoryHandler}
         />
       </Card>
       <Card title='Extra Filters' id='filters'>

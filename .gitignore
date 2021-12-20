@@ -27,3 +27,4 @@ yarn-error.log*
 .prettierignore
 .prettierrc
 CNAME
+src/Utils/Config/default.js

@@ -9,6 +9,11 @@ const Set = ({
   sizesInStock,
   fabricSetsInCart,
   adjustItemInCart,
+  isLoadingInventory,
+  inventoryError,
+  inventory,
+  adjustInventoryHandler,
+  fabricSetsInInventory,
 }) => {
   return (
     <section className={classes.fabricSet}>
@@ -25,10 +30,15 @@ const Set = ({
       </p>
       <Stock
         sizesInStock={sizesInStock}
+        inventory={inventory}
         fabric_title={fabric_title}
         images={images}
         adjustItemInCart={adjustItemInCart}
         fabricSetsInCart={fabricSetsInCart}
+        isLoadingInventory={isLoadingInventory}
+        inventoryError={inventoryError}
+        adjustInventoryHandler={adjustInventoryHandler}
+        fabricSetsInInventory={fabricSetsInInventory}
       />
       <div className='clear' />
     </section>

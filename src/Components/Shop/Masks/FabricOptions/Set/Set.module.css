@@ -22,6 +22,7 @@
 .stock {
   margin-bottom: 0;
   line-height: 1.1em;
+  text-align: left;
 }
 .stock span.size {
   color: var(--accent);
