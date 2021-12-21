@@ -50,6 +50,12 @@ strong {
 .subAccent {
   color: var(--subAccent);
 }
+.error {
+  padding: 0.3rem;
+  background-color: rgb(255, 204, 204);
+  border: 1px solid red;
+  border-radius: 0.3rem;
+}
 img {
   border-radius: 5px;
 }

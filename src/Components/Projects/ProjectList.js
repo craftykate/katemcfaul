@@ -20,6 +20,21 @@ import grampa from './img/grampa.jpg'
 const ProjectList = () => (
   <>
     <Project
+      name='This Site!'
+      languages='React, JavaScript, Firebase, Fetch, HTML/JSX'
+      codeLink='https://github.com/craftykate/katemcfaul'
+      description={
+        <p>
+          This is probably obvious, but I built this site. Built in React and
+          uses React router, context, hooks, custom hooks, portals and more. The
+          shop fetches inventory data from Firebase to show current amounts in
+          stock, and there are admin functions - I can log in and update those
+          amounts directly from the site. I use this site as my React
+          playground!
+        </p>
+      }
+    />
+    <Project
       name='Teen Center Sign In App'
       image={teenCenter}
       languages='React, JavaScript, Firebase, Axios, HTML/JSX, SCSS'
@@ -281,17 +296,6 @@ const ProjectList = () => (
           use his iPad and I was always happy to help, but having screenshots
           for him to look at while I talked him through his questions was
           helpful.{' '}
-        </p>
-      }
-    />
-    <Project
-      name='This Site!'
-      languages='React, JavaScript, HTML/JSX, CSS'
-      codeLink='https://github.com/craftykate/katemcfaul'
-      description={
-        <p>
-          It should go without saying by now that I also built this site. Built
-          with React.{' '}
         </p>
       }
     />

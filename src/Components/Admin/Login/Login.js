@@ -4,6 +4,7 @@ import React from 'react'
 import AuthContext from 'Context/auth-context'
 // Utils
 import config from 'Utils/Config/default'
+import useCustomFetch, { getConfig } from 'Utils/Data'
 // Components
 import LoginForm from './LoginForm'
 
@@ -53,7 +54,7 @@ const passwordReducer = (state, action) => {
   return { ...initialPassword }
 }
 
-const Login = () => {
+const Login = ({ error, setError }) => {
   const auth = React.useContext(AuthContext)
   // Whether or not form is valid
   const [formIsValid, setFormIsValid] = React.useState(false)
@@ -65,6 +66,7 @@ const Login = () => {
   const [passwordState, dispatchPassword] = React.useReducer(passwordReducer, {
     ...initialPassword,
   })
+  const { isLoading, sendFetch: loginUser } = useCustomFetch()
 
   // Check if the whole form is valid when the email and password states change,
   // after user pauses for a bit. Earlier versions of this made more sense - it
@@ -102,10 +104,29 @@ const Login = () => {
     if (field === 'password') dispatchPassword(dispatchObj)
   }
 
+  const saveToken = (data) => {
+    if (!data?.idToken) {
+      setError('There was a problem logging in, check username and password')
+    } else {
+      const expirationTime = new Date(
+        new Date().getTime() + data.expiresIn * 1000
+      )
+      auth.login(data.email, data.idToken, expirationTime.toISOString())
+    }
+  }
+
   // Submit form
   const submitHandler = (e) => {
     e.preventDefault()
-    auth.onLogin(emailState.value)
+    setError(null)
+    const body = {
+      email: emailState.value,
+      password: passwordState.value,
+      returnSecureToken: true,
+    }
+    const url = `${config.loginUrl}:signInWithPassword?key=${config.apiKey}`
+    const fetchConfig = getConfig(url, 'POST', body)
+    loginUser(fetchConfig, saveToken)
   }
 
   return (
@@ -116,6 +137,8 @@ const Login = () => {
       changeHandler={changeHandler}
       validateFieldHandler={validateFieldHandler}
       formIsValid={formIsValid}
+      error={error}
+      isLoading={isLoading}
     />
   )
 }

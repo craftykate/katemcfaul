@@ -1,7 +1,5 @@
 // Packages
 import React from 'react'
-// Utils
-import config from 'Utils/Config/default'
 
 const useCustomFetch = () => {
   const [isLoading, setIsLoading] = React.useState(false)
@@ -21,6 +19,7 @@ const useCustomFetch = () => {
       console.debug('response', response)
 
       if (!response.ok) {
+        parseData(null)
         throw new Error('Fetching error!')
       }
 
@@ -37,9 +36,9 @@ const useCustomFetch = () => {
   return { isLoading, error, sendFetch }
 }
 
-export const getConfig = (apiCall, method = 'GET', body = null) => {
+export const getConfig = (url, method = 'GET', body = null) => {
   return {
-    url: `${config.apiBaseUrl}/${apiCall}.json`,
+    url,
     method,
     headers: {
       'Content-Type': 'application/json',

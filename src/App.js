@@ -1,7 +1,7 @@
 // Packages, CSS, Context, Utils, Components, UI, Components, Media
 // Packages
-import React, { useEffect } from 'react'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import React from 'react'
+import { Route, Switch, useLocation, Redirect } from 'react-router-dom'
 import ReactGA from 'react-ga'
 // Components
 import Layout from './Components/Layout/Layout'
@@ -19,7 +19,7 @@ ReactGA.pageview('app')
 function App() {
   const { pathname, hash, key } = useLocation()
 
-  useEffect(() => {
+  React.useEffect(() => {
     // if not a hash link, scroll to top
     if (hash === '') {
       window.scrollTo(0, 0)
@@ -59,6 +59,9 @@ function App() {
         </Route>
         <Route path='/admin'>
           <Admin />
+        </Route>
+        <Route path='*'>
+          <Redirect to='/' />
         </Route>
       </Switch>
     </Layout>

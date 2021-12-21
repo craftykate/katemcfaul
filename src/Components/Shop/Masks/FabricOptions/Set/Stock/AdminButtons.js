@@ -16,7 +16,7 @@ const AdminButtons = ({
   const auth = React.useContext(AuthContext)
   const lower = Number(stockAmount) !== 0 ? stockAmount - 1 : 0
   const higher = stockAmount + 1
-  // Disable the lower button if stock is already at zero to prevent uneccessary
+  // Disable the lower button if stock is already at zero to prevent unnecessary
   // db hits
   const disabled = Number(stockAmount) === 0 ? 'disabled' : null
   if (!auth.isLoggedIn) return null

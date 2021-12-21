@@ -34,7 +34,7 @@ const CartRow = ({ item, adjustItemInCart }) => {
           &#43;
         </Button>
       </div>
-      <span className={classes.title}>{item.fabric_title}</span>
+      <span className={classes.title}>{item.fabric_title}</span>{' '}
       <span className={classes.size}>
         Size: <span className={classes.sizeName}>{item.size}</span>
       </span>

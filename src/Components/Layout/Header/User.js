@@ -13,7 +13,7 @@ const User = () => {
     auth.isLoggedIn && (
       <div className={classes.user}>
         Hello, {auth.email}{' '}
-        <TextButton onClick={auth.onLogout}>(Logout)</TextButton>
+        <TextButton onClick={auth.logout}>(Logout)</TextButton>
       </div>
     )
   )

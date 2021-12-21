@@ -1,9 +1,12 @@
 // Packages
-import React, { useEffect } from 'react'
+import React from 'react'
 // CSS
 import classes from 'Components/Shop/Shop.module.css'
 import cardClasses from 'Components/UI/Card/Card.module.css'
+// Context
+import AuthContext from 'Context/auth-context'
 // Utils
+import config from 'Utils/Config/default'
 import useCustomFetch, { getConfig } from 'Utils/Data'
 // Components
 import Card from 'Components/UI/Card/Card'
@@ -23,6 +26,7 @@ const Masks = () => {
   const [showCart, setShowCart] = React.useState(false)
   const { isLoading, error, sendFetch: fetchInventory } = useCustomFetch()
   const { sendFetch: adjustInventory } = useCustomFetch()
+  const auth = React.useContext(AuthContext)
 
   // Fetch inventory of masks when page loads
   React.useEffect(() => {
@@ -33,7 +37,8 @@ const Masks = () => {
       setInventory(parsedInventory)
     }
     // Get the fetch config details, then do the actual fetching
-    const fetchConfig = getConfig('inventory')
+    const url = `${config.apiBaseUrl}/inventory.json`
+    const fetchConfig = getConfig(url)
     fetchInventory(fetchConfig, parseInventory)
   }, [fetchInventory]) // This is a useCallback so it won't create an endless loop
 
@@ -41,6 +46,7 @@ const Masks = () => {
   const updateInventory = (color, data) => {
     const size = Object.keys(data)[0]
     const inventoryCopy = { ...inventory }
+    if (!inventoryCopy[color]) inventoryCopy[color] = {}
     inventoryCopy[color][size] = data[size]
     setInventory(inventoryCopy)
   }
@@ -48,8 +54,9 @@ const Masks = () => {
   // Adjust inventory in both db and use data back
   const adjustInventoryHandler = async (color, size, amount) => {
     const colorLink = color.replace(/\s/g, '%20')
+    const url = `${config.apiBaseUrl}/inventory/${colorLink}.json?key=${config.apiKey}&auth=${auth.token}`
     const body = { [size]: amount }
-    const fetchConfig = getConfig(`inventory/${colorLink}`, 'PUT', body)
+    const fetchConfig = getConfig(url, 'PUT', body)
     adjustInventory(fetchConfig, updateInventory.bind(null, color))
   }
 
@@ -98,7 +105,7 @@ const Masks = () => {
     setShowCart((prevState) => !prevState)
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     const storedCart = localStorage.getItem('cart')
     if (storedCart) {
       setCartItems(JSON.parse(storedCart))
